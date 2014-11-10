@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+.flex-box{
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	bottom: 0;
+	padding: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+.one-message {
+	border: 1px solid #ccc;
+	font-size: 1.3rem;
+	padding: 3px;
+	width: 100%;
+	margin-top: 3px;
+}
+.message-container {
+	padding-bottom: 3px;
+	width: 100%;
+	overflow-y: auto;
+	flex-shrink: 100;
+}
+.message-input {
+	width: 100%;
+}
+.message-input form{
+	margin-top: 3px;
+	display: flex;
+	font-size: 1.5rem;
+}
+.message-input input{
+	flex-grow: 5;
+}
+/*::-webkit-scrollbar{
+	width: 0px;
+}*/

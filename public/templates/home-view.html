@@ -1,0 +1,13 @@
+<div class='flex-box'>
+<div class='message-container' id='message-container'>
+	<div class='one-message' ng-repeat='message in messages'>
+		{{message.message}}
+	</div>
+</div>
+<div class='message-input'>
+	<form>
+	<input type='text' placeholder='Message' ng-model='inputText'></input>
+	<button ng-click='sendMessage()'>Send</button>
+	</form>
+</div>
+</div>
