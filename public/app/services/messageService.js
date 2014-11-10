@@ -8,4 +8,10 @@ app.service('messageService', function($http){
 			data: message
 		})
 	}
+	this.getMessages = function(){
+		return $http({
+			method: 'GET',
+			url: '/api/message'
+		})
+	}
 });

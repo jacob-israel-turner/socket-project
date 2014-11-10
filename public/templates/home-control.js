@@ -1,8 +1,24 @@
 var app = angular.module('socketApp');
 
-app.controller('homeCtrl', function($scope, messageService){
+app.controller('homeCtrl', function($scope, $timeout, $interval ,messageService){
 	var socket = io.connect('http://localhost')
-	$scope.messages = [{message: 'Welcome to chat!'}]
+	
+	$scope.updateMessages = function(){
+		 messageService.getMessages().then(function(data){
+			$scope.messages = data.data;
+		})
+	}
+	$scope.updateMessages();
+
+	$timeout(function(){
+		var elem = document.getElementById('message-container');
+		elem.scrollTop = elem.scrollHeight;
+	}, 200);
+
+	$interval(function(){
+		$scope.updateMessages();
+	}, 30000);
+
 	$scope.sendMessage = function(){
 		if(!$scope.inputText) return;
 		var json = {
@@ -17,6 +33,7 @@ app.controller('homeCtrl', function($scope, messageService){
 		});
 		$scope.inputText = '';
 	}
+
 	socket.on('new message', function(data){
 		var elem = document.getElementById('message-container');
 		var bottom = false;
@@ -29,10 +46,5 @@ app.controller('homeCtrl', function($scope, messageService){
 		if(bottom === true) {
 			elem.scrollTop = elem.scrollHeight;
 		}
-	})
-	socket.on('user connected', function(data){
-		$scope.$apply(function(){
-			$scope.messages.push(data);
-		})
 	})
 })
