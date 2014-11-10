@@ -17,12 +17,19 @@ App.get('/', function(req, res){
 })
 
 io.on('connection', function (socket) {
-	io.emit('user connected', {message: socket.client.id + ' has connected.'});
+	io.emit('user connected', {
+		message: socket.client.id + ' has connected.',
+		timestamp: Date.now()
+	});
 	console.log(socket.client.id);
 });
 
 App.post('/api/message', function(req, res){
-	io.emit('new message', req.body);
+	io.emit('new message', {
+		message: req.body.message,
+		timestamp: Date.now()
+
+		});
 	res.end();
 })
 

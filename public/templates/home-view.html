@@ -1,7 +1,7 @@
 <div class='flex-box'>
 <div class='message-container' id='message-container'>
 	<div class='one-message' ng-repeat='message in messages'>
-		{{message.message}}
+		<span>{{message.message}}</span>  <span class='time-stamp'><i>{{message.timestamp | date:'MMM d, h:mm:ss a'}}</i></span>
 	</div>
 </div>
 <div class='message-input'>
