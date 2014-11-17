@@ -13,7 +13,7 @@ Then use NPM to install socket.io on your server.
 ##Step 2
 ####Set up your Express server
 
-You have to set up your Express server slightly differently than normal in order to incorporate socket.io.  For your convenience, I have already set up the server correctly. The server will run exactly the same, but has to be set up this way to access certain attributes of something or another.  If you actually want to know why, go [here](http://goo.gl/9Mkuss).
+You have to set up your Express server slightly differently than normal in order to incorporate socket.io.  For your convenience, I have already set up the server correctly. The server will run exactly the same, but has to be set up this way to reuse the server in multiple ways (Like setting up a Socket connection).  If you actually want to know why, go [here](http://goo.gl/9Mkuss).
 
 ##Step 3
 ####Set up your emit
