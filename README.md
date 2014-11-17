@@ -50,3 +50,5 @@ That's it!  Pretty easy, eh?  Socket.io is super cool because it's so simple and
 
 
 If you get stuck or want to see how I did things, check out the solution branch in this repo.
+
+[Here](http://blog.arungupta.me/2014/02/rest-vs-websocket-comparison-benchmarks/) is some light reading on REST vs WebSocket.
