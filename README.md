@@ -41,7 +41,7 @@ Now set up a listener (`socket.on`) to listen for the emit that you just set up 
 
 That's it!  Pretty easy, eh?  Socket.io is super cool because it's so simple and easy to incorporate into a SPA.  There are a few things to keep in mind and plan for when using a setup with socket.io.  For example, it might be wise to simply append a new message to the messages array on the scope to avoid unnecessary lag from HTTP requests.  However, that makes you prone to become unscyronized with the messages in the database (if the client loses internet connection for 30 seconds, they won't recieve any of the emits that happened during that time, and will be totally out of the loop with whatever conversation happened.  Not cool!).  So, it would be wise to set up periodic synchronization with the database.
 
-##Black Diamond
+##Purple Ruby
 
 
 * Set up a way to stay synchronized with the database during downtimes (I used $timeout, but there might be other more resource-efficient ways).
