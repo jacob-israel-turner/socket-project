@@ -44,7 +44,7 @@ That's it!  Pretty easy, eh?  Socket.io is super cool because it's so simple and
 ##Purple Ruby
 
 
-* Set up a way to stay synchronized with the database during downtimes (I used $timeout, but there might be other more resource-efficient ways).
+* Set up a way to stay synchronized with the database during downtimes (I used `$timeout`, but there might be other more resource-efficient ways).
 
 * Send a new message and emit every time a user connects to the server.
 
