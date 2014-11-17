@@ -1,5 +1,5 @@
 #Socket.io with Angular
-Implementing Socket.io in a messaging app
+###Implementing Socket.io in a messaging app
 
 ##Step 1
 ####Install socket.io
