@@ -4,10 +4,10 @@ Implementing Socket.io in a messaging app
 ##Step 1
 ####Install socket.io
 
-include the socket.io script in your index.html (BEFORE your angular app files)
+Include the socket.io script in your index.html (BEFORE your angular app files)
 `https://cdn.socket.io/socket.io-1.2.0.js`
 
-NPM install socket.io
+Then use NPM to install socket.io as a dependency on your server.
 
 
 ##Step 2
