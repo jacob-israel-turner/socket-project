@@ -7,7 +7,7 @@
 Include the socket.io script in your index.html (BEFORE your angular app files)
 `https://cdn.socket.io/socket.io-1.2.0.js`
 
-Then use NPM to install socket.io as a dependency on your server.
+Then use NPM to install socket.io on your server.
 
 
 ##Step 2
