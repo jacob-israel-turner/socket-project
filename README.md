@@ -2,7 +2,7 @@
 Implementing Socket.io in a messaging app
 
 ##Step 1
-Install socket.io
+####Install socket.io
 
 include the socket.io script in your index.html (BEFORE your angular app files)
 `https://cdn.socket.io/socket.io-1.2.0.js`
@@ -11,12 +11,12 @@ NPM install socket.io
 
 
 ##Step 2
-Set up your Express server
+####Set up your Express server
 
 You have to set up your Express server slightly differently than normal in order to incorporate socket.io.  For your convenience, I have already set up the server correctly. The server will run exactly the same, but has to be set up this way to access certain attributes of something or another.  If you actually want to know why, go [here](http://goo.gl/9Mkuss).
 
 ##Step 3
-Set up your emit
+####Set up your emit
 
 Socket.io is basically a real-time message system between your front-end and back-end.  You can send messages and data back and forth real time.  The system is event-based.  When X happens on the backend , send this message (which can then trigger other events.
 
@@ -28,7 +28,7 @@ Now using what you've learned, set up an emit to be fired off every time the use
 Cool.  Now every time a user sends a new message to the server, it sends off a (real-time) message through the whole app saying 'Hey!  New message!', along with the message.  So let's head back to the front-end and set things up there.
 
 ##Step 4
-Set up your listener
+####Set up your listener
 
 Head back over to [the docs](http://socket.io/docs/) and check out the documentation on 'on'.
 
